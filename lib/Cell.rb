@@ -67,16 +67,24 @@ end
 
   # Method to transform body_dimensions column and set specific strings to 12345
   def transform_body_dimensions
-    if @body_dimensions.nil? || @body_dimensions.strip.empty?
-      @body_dimensions = nil
-    elsif @body_dimensions.strip == '-'
-      @body_dimensions = nil
-    elsif @body_dimensions.strip.length < 2
+    if @body_dimensions.nil? || @body_dimensions.strip.empty? || @body_dimensions.strip == '-' || @body_dimensions.downcase.include?('mm')
       @body_dimensions = nil
     end
   end
 
   # Method to transform body_sim column to nil if it's "no" or "yes" (case-insensitive)
+  def transform_body_weight
+    if @body_weight.nil? || @body_weight.strip.empty?
+      @body_weight = nil
+    elsif @body_weight.strip == '-'
+      @body_weight = nil
+    elsif @body_weight.strip.length < 2 || @body_weight.strip.match(/^\d+(\.\d+)?$/)
+      @body_weight = nil
+    else
+      @body_weight = @body_weight.to_f
+    end
+  end
+
   def transform_body_sim
     return if @body_sim.nil? || @body_sim.strip.empty?
 
@@ -112,8 +120,7 @@ def read_csv(input_filename, output_filename)
     cell.transform_display_size
     cell.transform_launch_status
     cell.transform_platform_os
-    cell.transform_body_dimensions
-    cell.transform_body_sim  # Call the new method to transform body_sim
+    cell.transform_body_dimensions  # Call the new method to transform body_dimensions
     key = [cell.oem, cell.model, cell.launch_announced]
     unique_cells[key] = cell unless unique_cells.key?(key)
   end
