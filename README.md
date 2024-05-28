@@ -2,7 +2,7 @@
 
 
 ### Which programming language and version did you pick? 
-* I picked Ruby. (ruby 2.6.10p210 (2022-04-12 revision 67958))
+* I picked Ruby. (ruby 2.6.10p210 (2022-04-12 revision 67958)) 
 
 
 ### Why did you pick this programming language?
