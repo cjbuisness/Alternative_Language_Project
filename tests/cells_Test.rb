@@ -47,11 +47,11 @@ class TestCell < Minitest::Test
 
   def test_transform_body_dimensions
     @cell.transform_body_dimensions
-    assert_nil @cell.body_dimensions  # Since dimensions are less than 2 characters
+    assert_nil @cell.body_dimensions  
   end
 
   def test_transform_body_sim
     @cell.transform_body_sim
-    assert_nil @cell.body_sim  # Since the value is 'Yes'
+    assert_nil @cell.body_sim  
   end
 end
