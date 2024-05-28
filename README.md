@@ -6,7 +6,7 @@
 
 
 ### Why did you pick this programming language?
-I picked Ruby because I recently met someone named Ruby, and they kept popping into my head when I looked at the other options. Additionally, (seemingly) required the least amount of infrastructure to be able to run a simple hello world. I spent much time trying to troubleshoot setting up requirements to run C, C++, and C# in Visual Studio Code, and kept running in to small errors. Finally, I feel Ruby has a very clean look, and enjoyed the practice we’ve had with it in class.
+I picked Ruby because I recently met someone named Ruby, and they kept popping into my head when I looked at the other language options. Additionally, Ruby (seemingly) required the least amount of infrastructure to be able to run a simple hello world. I spent much time trying to troubleshoot setting up requirements to run C, C++, and C# in Visual Studio Code, and kept running in to small errors. Finally, I feel Ruby has a very clean look, and enjoyed the practice we’ve had with it in class.
 
 ### How does Ruby handle: object-oriented programming, file ingestion, conditional statements, assignment statements, loops, subprograms (functions/methods), unit testing and exception handling?
 
@@ -25,7 +25,7 @@ I picked Ruby because I recently met someone named Ruby, and they kept popping i
 #### Unit Testing 
 - While Ruby has many testing frameworks, RSpec is the most commonly framework. Like testing frameworks in other OOP languages, tests are organized into test cases, and test that the code behaves as expected. 
 #### Exception Handling 
-- Ruby supports exception handling, utilizing keywords such as “begin”, “rescue”, “ensure”, and “raise”. “Begin” is the equivalent to a “try” statement in java, where “rescue” is akin to a “catch” statement in java. “Ensure” functions similar to an if statement, where a different block of code will run if a “rescue” appears.
+- Ruby supports exception handling, utilizing keywords such as “begin”, “rescue”, and “ensure”. “Begin” is the equivalent to a “try” statement in java, where “rescue” is akin to a “catch” statement in java. “Ensure” functions similar to an if statement, where a different block of code will run if a “rescue” appears.
 
 ### List out 3 libraries you used from your programming language (if applicable) and explain what they are, why you chose them and what you used them for.
 
